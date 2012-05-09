@@ -333,9 +333,9 @@
     </build>
 
     <scm>
-        <connection>scm:git:git://github.com/jenkinsci/artifactory-plugin.git</connection>
-        <developerConnection>scm:git:git@github.com:jenkinsci/artifactory-plugin.git</developerConnection>
-        <url>https://github.com/jenkinsci/artifactory-plugin</url>
+        <connection>scm:git:git@github.com:elig/artifactory-plugin.git</connection>
+        <developerConnection>scm:git:git@github.com:elig/artifactory-plugin.git</developerConnection>
+        <url>https://elig@github.com/elig/artifactory-plugin.git</url>
     </scm>
 
     <profiles>
@@ -373,10 +373,11 @@
     </profiles>
 
     <distributionManagement>
-        <repository>
-            <id>maven.jenkins-ci.org</id>
-            <url>http://maven.jenkins-ci.org:8081/content/repositories/releases/</url>
-        </repository>
-    </distributionManagement>
+    <repository>
+        <id>eli-PC</id>
+        <name>eli-PC-releases</name>
+        <url>http://localhost:8081/artifactory/libs-release-local</url>
+    </repository>
+</distributionManagement>
 
 </project>
