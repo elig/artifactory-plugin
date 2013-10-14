@@ -337,6 +337,7 @@
         <url>https://elig@github.com/elig/artifactory-plugin.git</url>
     </scm>
 
+   
     <profiles>
         <profile>
             <id>itest</id>
@@ -366,6 +367,46 @@
                 <pluginRepository>
                     <id>repo.jenkins-ci.org</id>
                     <url>http://repo.jenkins-ci.org/public/</url>
+                </pluginRepository>
+            </pluginRepositories>
+        </profile>
+
+        <profile>
+            <id>jfrog</id>
+            <repositories>
+                <repository>
+                    <id>central</id>
+                    <name>jfrog-apps-dist</name>
+                    <url>http://repo.jfrog.org/artifactory/libs-releases</url>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </repository>
+                <repository>
+                    <id>snapshots</id>
+                    <name>jfrog-apps-snapshots</name>
+                    <url>http://repo.jfrog.org/artifactory/libs-snapshots</url>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </repository>
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>central</id>
+                    <name>jfrog-plugins-dist</name>
+                    <url>http://repo.jfrog.org/artifactory/plugins-releases</url>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </pluginRepository>
+                <pluginRepository>
+                    <id>snapshots</id>
+                    <name>jfrog-plugins-snapshots</name>
+                    <url>http://repo.jfrog.org/artifactory/plugins-snapshots</url>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
                 </pluginRepository>
             </pluginRepositories>
         </profile>
